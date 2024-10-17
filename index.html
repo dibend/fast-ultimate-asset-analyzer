@@ -6,18 +6,68 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fast Ultimate Asset Analyzer</title>
         <style>
-            body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
-            .header { background-color: #333; color: #fff; text-align: center; padding: 10px 0; }
-            .container { padding: 20px; text-align: center; }
-            iframe { width: 100%; height: 80vh; border: none; }
-        </style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                width: 100%;
+                background-color: black;
+                overflow-x: hidden;
+            }
+
+            .fixed-header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: black;
+                z-index: 100;
+                text-align: center;
+                color: white;
+                padding: 10px 0;
+            }
+
+            h4 {
+                margin: 0;
+            }
+
+            a {
+                color: lightblue;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            .content {
+                padding-top: 60px;
+                overflow-y: scroll;
+                height: calc(100vh - 60px);
+            }
+
+            .scrolling-image {
+                text-align: center;
+                padding: 20px 0;
+            }
+
+            iframe {
+                display: block;
+                width: 100vw; /* Full viewport width */
+                height: 100%;
+                border: none;
+            }
     </head>
     <body>
-        <div class="header">
-            <h1>Fast Ultimate Asset Analyzer</h1>
+        <div class="fixed-header">
+            <h4>Made by <a href="https://njweb.solutions">NJWeb.Solutions</a></h4>
         </div>
-        <div class="container">
-            <iframe src="https://e7f4670a745171ca88.gradio.live" allowfullscreen></iframe>
+
+        <div class="content">
+            <div class="scrolling-image">
+                <img src="njweb.gif" alt="NJWeb Logo" style="max-width: 200px; height: auto;">
+            </div>
+            <iframe src="https://a6a431f4c8114cd110.gradio.live" allowfullscreen></iframe>
         </div>
     </body>
     </html>
